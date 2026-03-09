@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test'
 
+const BASE_URL = 'https://katalon-demo-cura.herokuapp.com/'
+
 test('Verify login pass with valid user', async ({ page }) => {
-	await page.goto('https://katalon-demo-cura.herokuapp.com/')
+	await page.goto(BASE_URL)
 
 	await page.click('#btn-make-appointment')
 	await page.fill('#txt-username', 'John Doe')
@@ -12,7 +14,7 @@ test('Verify login pass with valid user', async ({ page }) => {
 })
 
 test('Verify login fail with invalid password', async ({ page }) => {
-	await page.goto('https://katalon-demo-cura.herokuapp.com/')
+	await page.goto(BASE_URL)
 
 	await page.click('#btn-make-appointment')
 	await page.fill('#txt-username', 'John Doe')
@@ -28,7 +30,7 @@ test('Verify login fail with invalid password', async ({ page }) => {
 })
 
 test('Verify login fail with invalid username', async ({ page }) => {
-	await page.goto('https://katalon-demo-cura.herokuapp.com/')
+	await page.goto(BASE_URL)
 
 	await page.click('#btn-make-appointment')
 	await page.fill('#txt-username', 'hacker')
