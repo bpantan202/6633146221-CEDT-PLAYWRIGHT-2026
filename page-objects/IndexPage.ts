@@ -1,7 +1,7 @@
 import { type Page, type Locator } from '@playwright/test'
 
 export class IndexPage {
-	// Private Page Locators
+	// Private Page Locators.
 	private readonly page: Page
 	private readonly makeAppointmentLnk: Locator
 
