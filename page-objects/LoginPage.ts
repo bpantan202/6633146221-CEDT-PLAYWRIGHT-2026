@@ -1,6 +1,7 @@
 import { type Page, type Locator } from '@playwright/test'
 
 export class LoginPage {
+	
 	// Private Page Locators
 	private readonly page: Page
 	private readonly usernameTxt: Locator
